@@ -1,6 +1,6 @@
 {
-  "name": "gromcore",
-  "short_name": "gromcore",
+  "name": "GromCore",
+  "short_name": "GromCore",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
