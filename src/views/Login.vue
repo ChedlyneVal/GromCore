@@ -2,9 +2,9 @@
   <div>
     <NavBar></NavBar>
     <div class="container-fluid">
-      <div class="loginSection float-right">
+      <div class="loginSection">
         <h1>Login</h1>
-        <form>
+        <div class="clearfix">
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input
@@ -27,20 +27,26 @@
               placeholder="Password"
             />
           </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary">
+          <div class="form-group clearfix">
+            <button v-on:click="login" class="btn btn-primary float-right">
               Submit
             </button>
           </div>
-        </form>
-        <!-- //TODO: ADD support for logging in with google and facebook.
-        <div class="form-group">
-          <div class="dropdown-divider"></div>
-          <div>
-            <div class="google"><p>Login with google</p></div>
-            <div class="facebook"><p>Login with facebook</p></div>
+          <div class="signup">
+            <p>Not a Member? <a href="">Sign Up!</a></p>
           </div>
-        </div> -->
+        </div>
+        <!-- <hr /> -->
+        <div class="bottomLoginSection">
+          <!-- //TODO: ADD support for logging in with google and facebook. -->
+          <!-- <div class="form-group">
+            <div class="dropdown-divider"></div>
+            <div>
+              <div class="google"><p>Login with google</p></div>
+              <div class="facebook"><p>Login with facebook</p></div>
+            </div>
+          </div> -->
+        </div>
       </div>
     </div>
   </div>
@@ -52,6 +58,11 @@ import NavBar from "@/components/NavBar.vue";
 export default {
   components: {
     NavBar
+  },
+  methods: {
+    login() {
+      console.log("Login");
+    }
   }
 };
 </script>
@@ -61,18 +72,17 @@ export default {
   position: absolute;
   top: 50%;
   left: 80%;
-  margin-top: -300px;
+  margin-top: -175px;
   margin-left: -200px;
   width: 500px;
-  height: 500px;
+  height: 400px;
   padding: 25px 50px;
   border-radius: 5px;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2);
-  form {
-    button {
-      display: block;
-      float: right;
-    }
+}
+.signup {
+  p {
+    text-align: center;
   }
 }
 </style>
