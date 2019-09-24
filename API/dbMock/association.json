@@ -1,0 +1,22 @@
+{
+  "association": [
+    {
+      "type": "school",
+      "schoolID": "SC123",  
+      "school": "Some School"
+    },
+    {
+      "type": "organization",
+      "organizationID": "ORG123",
+      "organizationName": "GetABoard",
+      "location": {
+        "line1": "1000 E Robinson Street",
+        "line2": "",
+        "city": "Orlando",
+        "state": "Florida",
+        "zipCode": 12345 
+      }
+
+    }
+  ]
+}

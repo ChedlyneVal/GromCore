@@ -1,0 +1,20 @@
+{
+  "_id": 123,
+  "person": {
+    "firstName": "Jon",
+    "middleName": "Something",
+    "lastName": "Doe",
+    "dateOfBirth": {
+      "month": "january",
+      "day": 1,
+      "year": 2019
+    },
+    "gender": "male",
+    "phoneNumber": "1234567890"
+
+  },
+  "username": "someuser",
+  "password": "1a2b3c4d5e6f8g9h0i",
+  "accountType": "student",
+  "association": ["SC123", "ORG123"]
+}
