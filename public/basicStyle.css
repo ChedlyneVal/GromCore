@@ -1,0 +1,19 @@
+/* For whole page */
+html {
+	font-color: gray;
+  margin: 0.5% 0.5% 0.5% 0.5%;
+}
+
+/* Navbar */
+nav {
+}
+
+body {
+	padding-top: 5%;
+  text-align: center;
+}
+
+#mainBlock {
+	border: 2px solid gray;
+	padding: 8% 8% 8% 10%;
+}
