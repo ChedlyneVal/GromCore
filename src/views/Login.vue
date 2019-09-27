@@ -13,6 +13,7 @@
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="Enter email"
+              v-model="email"
             />
             <small id="emailHelp" class="form-text text-muted"
               >We'll never share your email with anyone else.</small
@@ -25,10 +26,11 @@
               class="form-control"
               id="exampleInputPassword1"
               placeholder="Password"
+              v-model="password"
             />
           </div>
           <div class="form-group clearfix">
-            <button v-on:click="login" class="btn btn-primary float-right">
+            <button v-on:click="somelogin" class="btn btn-primary float-right">
               Submit
             </button>
           </div>
@@ -54,14 +56,20 @@
 
 <script>
 import NavBar from "@/components/NavBar.vue";
+import { userService } from "../_services/user.service";
 
 export default {
+  data: () => ({
+    email: null,
+    password: null
+  }),
   components: {
     NavBar
   },
   methods: {
-    login() {
+    somelogin() {
       console.log("Login");
+      userService.login(this.email, this.password);
     }
   }
 };
@@ -73,7 +81,7 @@ export default {
   top: 50%;
   left: 80%;
   margin-top: -175px;
-  margin-left: -200px;
+  margin-left: -300px;
   width: 500px;
   height: 400px;
   padding: 25px 50px;
