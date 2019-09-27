@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">GromCore</a>
+    <a class="navbar-brand" href="#"><img class="logo" src="../assets/NeonGreenOutline.png" alt=""></a>
     <button
       class="navbar-toggler"
       type="button"
@@ -14,12 +14,9 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav mr-auto float-right">
         <li class="nav-item">
           <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
         </li>
       </ul>
       <div class="form-inline my-2 my-lg-0">
@@ -32,9 +29,15 @@
 </template>
 
 <style lang="scss">
+.bg-dark {
+  background-color: #222 !important;
+}
 @media (min-width: 980px) {
   body {
     padding-top: 56px;
   }
+}
+.logo {
+  height: 50px;
 }
 </style>
