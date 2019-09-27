@@ -1,19 +1,31 @@
+const config = require('../_config/index');
+
+
 function login(userEmail, userPassword) {
 
-  console.log(userEmail);
-  console.log(userPassword);
+  const requestOptions = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      userEmail,
+      userPassword
+    })
+  };
 
+  return fetch(`${config.apiUrl}/users/authenticate`, requestOptions)
+    .then(handleResponse)
+    .then(user => {
+      // login successful if there's a jwt token in the response
+      if (user.token) {
+        // store user details and jwt token in local storage to keep user logged in between page refreshes
+        localStorage.setItem('user', JSON.stringify(user));
+      }
 
-  console.log(localStorage.getItem('user'));
+      return user;
+    });
 
-  // return fetch();
-
-  localStorage.setItem('user', JSON.stringify({
-    user: userEmail,
-    password: userPassword,
-    token: "1234567890abcdefghijk"
-  }));
-  console.log(localStorage.getItem('user'));
 
 
 
@@ -25,7 +37,39 @@ function logout() {
 
 }
 
+function register(user) {
+  const requestOptions = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(user)
+  };
+
+  return fetch(`${config.apiUrl}/users/register`, requestOptions).then(handleResponse);
+}
+
+
+function handleResponse(response) {
+  return response.text().then(text => {
+    const data = text && JSON.parse(text);
+    if (!response.ok) {
+      if (response.status === 401) {
+        // auto logout if 401 response returned from api
+        logout();
+        location.reload(true);
+      }
+
+      const error = (data && data.message) || response.statusText;
+      return Promise.reject(error);
+    }
+
+    return data;
+  });
+}
+
 export const userService = {
   login,
-  logout
+  logout,
+  register
 }
