@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<style>
+    body{
+        background: white;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding:0;
+    }
+    header{
+        background:white;
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    li{
+        display: inline-block;
+        margin-right: 20px;
+    }
+    section{
+        background:white;
+        color: black;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+    }
+    #name-box{
+        position: relative;
+        margin: 5% auto;
+        height: 800px;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0,0, .6);
+        width: 600px;
+        right: -700px;
+        top: 20px;
+    }
+    .right-box{
+        position: absolute;
+        top: 10px;
+        right:340px;
+        box-sizing: border-box;
+        padding: 30px;
+        width: 250px;
+        height: 50px;
+    }
+    div {
+        display: inline-block;
+        
+}
+    div label {
+    display: block;
+}
+    h1{
+        position: absolute;
+        top: 40px;
+        margin: 0 0 20px 0;
+        font-weight: 300;
+        font-size: 28px;
+        right: 200px;
+    }
+    h4{
+       position: absolute;
+       top:100px;
+       right: 420px;
+       font-size: 20px;
+       margin: 10 0 70px 0;
+    
+    }
+  /*
+    #name {
+    width: 223.67px;
+    height: 40.25px;
+}
+
+.form-group {
+    display: inline-block;
+    width: calc(50% - 1px);
+    padding: 0 !important;
+}
+
+.container {
+    display: inline-block;
+    width: 90%;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+}
+
+.form-control {
+    margin: 0 !important;
+}*/
+
+
+    </style>
+</head>
+<body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href= "url"style= "text-decoration:none">GROMCORE</a></li>
+                    <lI><a href= "url" style= "text-decoration:none">About</a></lI>
+                    <li><a href="url"style= "text-decoration:none">Contact </a></li>
+                    <li><a href="index.html"style= "text-decoration:none">Sign In</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section> 
+            <h1> Create Student Account </h1><br>
+            <h4>Studnet Information</h4><br>
+        </section>
+
+        <div id="name-box">
+                <div class = "right-box">
+                        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+                        <div class="container">
+                                <div class="row">
+                                    <div class="form-group name1 col-md-6">
+                                        <label for="exampleInputEmail1" class="formText">First Name</label>
+                                        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="muverName">
+                                    </div>
+                            
+                                    <div class="form-group name2 col-md-6">
+                                        <label for="exampleInputEmail1## Heading ##" class="formText">Last Name</label>
+                                        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="muverPhone">
+                                    </div>
+                                </div>
+                             </div>
+                                <div class="container">
+                                    <div class="row">
+                                            <div class="form-group name1 col-md-8">
+                                                <label for="gradelevel" class="text"> Grade (ex 7th)</label>
+                                                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="muverPhone" style="width: 50px;" style="size: 12px">
+                                            </div>
+
+                                             <div class="form-group name2 col-md-8">
+                                                 <label for="id" class="text">Student I.D. Number or <br>Teacher Name </label>
+                                                <input type="text" class="form-control" id="name" >
+                                            </div>
+                                 </div>
+                                </div>
+                                 <h5> Account Information</h5>
+                                 <div class="container">
+                                    <div class="row">
+                                            <div class="form-group name1 col-md-8">
+                                            <label for="id" class="text">Email</label>
+                                                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="muverPhone" style="width: 200px;" style="size: 7000px" >
+                                            </div> 
+                                        </div>
+                                </div>
+                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="form-group name1 col-md-9">
+                                                                <label for="Password" class="formText">Password</label>
+                                                                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="muverName">
+                                                            </div>
+                                                    
+                                                            <div class="form-group name2 col-md-9">
+                                                                <label for="Password" class="formText"> Confirm Password</label>
+                                                                <iinput type="text" class="form-control" id="name" >
+                                                            </div>
+                                                        </div>
+                                                     </div>
+                                                     <div class="container">
+                                                            <div class="row">
+                                                                    <div class="form-group name1 col-md-10">   
+                                                    <center><h6>By checking this box you agree to GromCore's <a href="url">Terms of Conditions</a> <br> and
+                                                        awknowledge that you have read the <a href ="url">Privacy Policy</a> 
+                                                        <input type="checkbox" placeholder=" " check=" " name=" ">
+                                                     </h6></center> 
+                                               <center><button>Create My Account</button> </center>
+                                                                    </div></div></div>
+                                              
+
+                                   
+        </div>
+        </div>
+</body>
+</html>
